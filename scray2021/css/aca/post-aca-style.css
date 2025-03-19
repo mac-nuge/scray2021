@@ -1,0 +1,162 @@
+
+
+/*#region << POST-ACA-STYLE_ALL PAGES_DESKTOP */
+
+/* ELEMENT CONTAINERS  This is where I chunk out the general spaces for each thing. */
+
+@media (min-width: 769px) { 
+
+
+	div.titlecontainer {
+		grid-column: 4 / 6;
+		grid-row: 2 / span 10;
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: repeat(auto-fill, 50px);
+
+	}
+
+	div.datecontainer {
+		grid-column: 2 / 6;
+		grid-row: 2/4;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+	}
+
+	div.blockcontainer {
+		grid-column: 2 / 6;
+		grid-row: 4;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+	}
+
+
+	/*
+
+	Each element - this will be customised for each category, and will live in the specific category pages
+
+	*/
+			
+	div.title {
+		/* text-align: right; */
+		text-align: right;
+		font-size:xx-large;
+		overflow-wrap: anywhere;
+		grid-column: 3/6;
+		grid-row: 4;
+
+	}
+
+
+	div.date {
+		grid-column: 1 / 3;
+		place-self: center right;
+	}
+
+	div.blockcontainer > div, div.blockcontainer > p {
+		grid-column: 1 / 3;
+		text-align: justify;
+		line-height: 1.2;
+		font-family: 'Times New Roman', Times, serif;
+		font-size: 18px;
+
+	}
+
+
+	/*
+
+	SCROLL INDICATOR
+
+	*/
+
+			/* Style the header: fixed position (always stay at the top) */
+		.header {
+			position: fixed;
+			top: 0;
+			z-index: 1;
+			width: 100%;
+			background-color: none;
+		}
+		
+		/* The progress container (grey background) */
+		.progress-container {
+			width: 100%;
+			height: 0.3em;
+			background: none;
+		}
+		
+		/* The progress bar (scroll indicator) */
+		.progress-bar {
+			height: 0.3em;
+			background: rgb(255,192,203);
+			width: 0%;
+		}
+
+}
+
+
+/*#endregion*/
+/*>>>*/
+
+/*#region << POST-ACA-STYLE_ALL PAGES_MOBILE */
+
+@media (max-width: 768px) {
+
+
+div.titlecontainer {
+	overflow-wrap: anywhere;
+	font-size:xx-large;
+	grid-column: 1;
+	grid-row: 2;
+
+}
+
+div.datecontainer {
+	grid-column: 1;
+	grid-row: 4;
+	text-align: right;
+}
+
+div.blockcontainer {
+	text-align: justify;
+	grid-column: 1;
+	grid-row: 5;
+} 
+
+
+	/*
+
+	SCROLL INDICATOR
+
+	*/
+
+			/* Style the header: fixed position (always stay at the top) */
+			.header {
+				position: fixed;
+				top: 0;
+				z-index: 1;
+				width: 100%;
+				background-color: #f1f1f1;
+			}
+			
+			/* The progress container (grey background) */
+			.progress-container {
+				width: 100%;
+				height: 0.3em;
+				background: #ccc;
+			}
+			
+			/* The progress bar (scroll indicator) */
+			.progress-bar {
+				height: 0.3em;
+				background: rgb(255,192,203);
+				width: 0%;
+			}
+	
+
+}
+
+
+/*#endregion*/
+/*>>>*/
+

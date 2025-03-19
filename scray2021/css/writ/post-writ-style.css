@@ -1,0 +1,228 @@
+/* ------------- ACADEMIC STYLE ---------------- */
+
+
+/* ---------------------- ACA single pages -------------------------- */
+/*#region*/
+
+/* ELEMENT CONTAINERS 
+
+This is where I chunk out the general spaces for each thing.
+
+*/
+
+/* DESKTOP SPECS */
+
+@media (min-width: 769px) { 
+
+
+		div.titlecontainer {
+			grid-column: 4 / 6;
+			grid-row: 2 / span 10;
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
+			grid-template-rows: repeat(auto-fill, 50px);
+
+		}
+
+		div.datecontainer {
+			grid-column: 2 / 6;
+			grid-row: 2/4;
+			display: grid;
+			grid-template-columns: repeat(6, 1fr);
+		}
+
+		div.blockcontainer {
+			grid-column: 2 / 6;
+			grid-row: 4;
+			display: grid;
+			grid-template-columns: repeat(6, 1fr);
+		}
+
+
+		/*
+
+		Each element - this will be customised for each category, and will live in the specific category pages
+
+		*/
+				
+		div.title {
+			/* text-align: right; */
+			text-align: right;
+			font-size:xx-large;
+			overflow-wrap: anywhere;
+			grid-column: 3/6;
+			grid-row: 4;
+
+		}
+
+
+		div.date {
+			grid-column: 1 / 3;
+			place-self: center right;
+		}
+
+		div.blockcontainer > div, div.blockcontainer > p {
+			grid-column: 1 / 3;
+			text-align: justify;
+			line-height: 1.2;
+			font-family: 'Times New Roman', Times, serif;
+			font-size: 14px;
+
+		}
+
+
+
+}
+
+
+
+
+/* ------------------- mobile SPECS ------------------------ */
+
+
+@media (max-width: 768px) {
+
+
+	div.titlecontainer {
+		overflow-wrap: anywhere;
+		font-size:xx-large;
+		grid-column: 1;
+		grid-row: 2;
+
+	}
+
+	div.datecontainer {
+		grid-column: 1;
+		grid-row: 4;
+		text-align: right;
+	}
+
+	div.blockcontainer {
+		text-align: justify;
+		grid-column: 1;
+		grid-row: 5;
+	} 
+
+
+
+}
+
+
+
+/*#endregion*/
+
+
+
+/* ---------------------- ACA CATEGORY pages -------------------------- */
+/*#region*/ 
+
+
+/* ELEMENT CONTAINERS 
+
+This is where I chunk out the general spaces for each thing.
+
+*/
+
+/* CATEGORY DESKTOP SPECS */
+
+@media (min-width: 769px) { 
+
+
+div.postcontainer {
+	grid-column: 2 / 5;
+	grid-row: 2;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	z-index: 1;
+
+	
+}
+
+div.cat-date {
+	grid-column: 1;
+	align-self: center;
+}
+
+div.cat-title {
+	grid-column: 2/4;
+	align-self: center;
+	padding: 1.5em;
+	background-color: rgb(255, 255, 255, 0.5);
+	
+}
+
+div.cat-block {
+	grid-column: 3/5;
+	align-self: center;
+	
+}
+
+div.imagecontainer {
+	grid-column: 2 / 6;
+	grid-row: 2 / span 10;
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	grid-template-rows: repeat(auto-fill, 50px);
+}
+
+div.imagecontainer img {
+	filter: grayscale(100%);  
+	z-index: -1;
+
+}
+
+}
+
+
+/* ------------------- CATEGOROY MOBILE SPECS ------------------------ */
+
+
+@media (max-width: 768px) {
+
+
+	div.postcontainer {
+		grid-column: 1;
+		grid-row: 1;
+		display: grid;
+		grid-template-columns: 1fr 3fr;
+		
+	}
+	
+	div.cat-date {
+		grid-column: 1;
+		align-self: center;
+	}	
+	
+	div.cat-title {
+		grid-column: 2;
+		align-self: center;
+		padding: 1em;
+		background-color: rgb(255, 255, 255, 0.8);
+
+	}
+	
+	div.cat-block {
+		grid-column: 1;
+		align-self: center;
+		
+	}
+
+	div.imagecontainer {
+		grid-column: 1;
+		grid-row: 1 / span 10;
+		display: grid;
+		grid-template-columns: repeat(8, 1fr);
+		grid-template-rows: repeat(auto-fill, 50px);
+	}
+	
+	div.imagecontainer img {
+		filter: grayscale(100%);  
+		z-index: -1;
+	
+	}
+
+}
+
+			
+/*#endregion*/
+

@@ -1,0 +1,21 @@
+
+
+/*#region << ACA-STYLE.CSS_ALL PAGES_ALL */
+
+.title a:link {
+	text-decoration: underline;
+  }
+  
+.title a:visited {
+	text-decoration: underline;
+}
+
+
+  p.has-drop-cap:not(:focus):first-letter {
+	font-size: 100px;
+}
+
+/*#endregion*/
+/*>>>*/
+
+

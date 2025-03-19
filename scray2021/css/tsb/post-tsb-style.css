@@ -1,0 +1,196 @@
+/*--------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/* #region << POST-TSB-STYLE.css_HEADER/FOOTER_ALL*/
+
+
+header {
+	background-color: white;
+
+}
+
+
+nav {
+	background-color: lightgrey;
+}
+
+
+ul.navmenu2nd {
+	background-color: lightgrey;
+}
+
+
+div.home{
+	background-color: lightgrey;
+}
+
+ul.navmenu {
+	background-color: lightgrey;
+}
+
+
+footer {
+	background-color: white;
+ }
+
+p {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em ;
+}
+
+
+/*#endregion*/
+/*>>>*/
+
+
+	/*#region*//*specific post modifications*/
+
+	/*#endregion*/
+	/*>>>*/
+
+	/* ELEMENT CONTAINERS 
+
+	This is where I chunk out the general spaces for each thing.
+
+	*/
+
+
+/*#region << POST-TSB-STYLE_DESKTOP */
+
+@media (min-width: 769px) { 
+
+
+	div.titlecontainer {
+		grid-column: 4 / 6;
+		grid-row: 2 / span 10;
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: repeat(auto-fill, 50px);
+		z-index: 2;
+
+	}
+
+	div.datecontainer {
+		grid-column: 2 / 6;
+		grid-row: 2/4;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+	}
+
+	div.blockcontainer {
+		grid-column: 2 / 6;
+		grid-row: 4;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+	}
+
+
+	/*
+
+	Each element - this will be customised for each category, and will live in the specific category pages
+
+	*/
+			
+	div.title {
+		/* text-align: right; */
+		text-align: right;
+		font-size:xx-large;
+		overflow-wrap: anywhere;
+		font-family:'Times New Roman', Times, serif;
+
+		grid-column: 3/6;
+		grid-row: 2;
+
+	}
+
+	div.label {
+		font-size: 20px;
+		text-align: right;
+		padding: 1em;
+	}
+
+
+	  
+	
+	div.date {
+		font-family:'Courier New', Courier, monospace;
+		grid-column: 5;
+		grid-row: 6;
+		place-self: center right;
+	}
+
+	div.thumbnail {
+		grid-column: 3/6; 
+		grid-row: 7;
+	}
+	
+	div.blockcontainer > div, div.blockcontainer > p {
+		grid-column: 2 / 4;
+		text-align: justify;
+		line-height: 1.2;
+		font-family:'Times New Roman', Times, serif;
+		font-size: 1.6em;
+
+	}
+
+}
+
+	/*#endregion*/
+/*>>>*/
+
+
+/*#region << POST-TSB-STYLE_MOBILE */
+
+@media (max-width: 768px) {
+
+
+div.titlecontainer {
+	overflow-wrap: anywhere;
+	font-size:xx-large;
+	font-family:'Times New Roman', Times, serif;
+
+	grid-column: 1;
+	grid-row: 2;
+
+}
+
+div.datecontainer {
+	grid-column: 1;
+	grid-row: 4;
+	text-align: right;
+}
+
+div.blockcontainer {
+	text-align: justify;
+	font-family:'Times New Roman', Times, serif;
+	font-size: 1.6em;
+
+	grid-column: 1;
+	grid-row: 5;
+	margin-bottom: 3em;
+} 
+
+.label {
+	font-size: 16px;
+	padding: 1em;
+}
+
+
+div.thumbnail	 {
+	grid-column: 1;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+}
+
+div.thumbnail img {
+	grid-column: 1/5;	
+}
+
+
+}
+
+
+
+/*#endregion*/
+/*>>>*/

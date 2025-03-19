@@ -1,0 +1,251 @@
+/*!
+Theme Name: SCRAY2021
+Author: Mac Nguyen
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+underscores is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+
+
+
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*#region << STYLE.CSS_ALL PAGES_ALL*/
+
+/*
+DESCRIPTION: 
+ everything that applies blanket universally across all pages, and is platform agnostic
+*/
+
+
+    body, h1, h2, h3, h4, h5, h6, blockquote, dd, dl, hr, p, form{
+        margin: 0;
+        padding: 0;
+    }
+
+    body{
+        margin: 0;
+        font-family: Courier New, Georgia, Sans-serif;
+        font-size: 11px;
+        text-align: left;
+        vertical-align: top;
+        background: white;
+        color: black;	
+    }
+
+
+
+ 
+
+    a:link, a:visited {
+        text-decoration: underline;
+        color: black;
+    }
+
+    a:hover{
+        text-decoration: underline;
+        color: orange;	
+    }
+
+
+        
+    img {
+        max-width: 100%;
+        height: auto;
+        }
+
+/*#endregion*/
+/*>>>*/
+
+/*#region << STYLE.CSS_ALL PAGES_DESKTOP*/
+
+@media (min-width: 769px) { 
+
+    /* This looks after the main layout for the whole page outside of the header */
+    
+    
+    main {
+        display: grid;
+        grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
+        grid-auto-rows: minmax(30px, auto);
+    } 
+    
+    }
+    
+    
+    /*#endregion  STYLE. CSS DESKTOP MAIN GRID  */
+/*>>>*/
+
+/*#region << STYLE. CSS_ALL PAGES_MOBILE*/
+    
+    @media (max-width: 768px) {
+    
+        main {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            /* grid-template-columns: 1em minmax(0, 1fr) 1em; */
+            grid-auto-rows: minmax(30px, auto);
+            padding: 3em;
+        }
+    
+    }
+    
+    /*#endregion*/
+/*>>>*/
+
+
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*#region << STYLE.CSS_HEADER_ALL*/
+
+    /*#endregion*/
+/*>>>*/
+
+
+/*#region << STYLE.CSS_HEADER_DESKTOP*/
+
+
+@media (min-width: 769px) { 
+
+    
+    header {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 40px;
+        align-content: center;
+    }
+
+    header {
+        position: sticky;
+        width: 100%;
+        top: 0; /* Don't forget this, required for the stickiness */
+        background-color: white;
+        z-index: 10;
+    }
+
+
+    nav {
+        grid-column: 4;
+        background-color: pink;
+    }
+
+
+    ul.navmenu2nd {
+        list-style: none;
+        padding-left: 0;
+        background-color: pink;
+        display: flex;
+        justify-content: space-around;
+    }
+
+}
+
+    /*#endregion*/
+/*>>>*/
+
+
+/*#region << STYLE.CSS_HEADER_MOBILE*/
+
+@media (max-width: 768px) { 
+
+
+    header {
+        display: grid;
+        grid-template-columns: 10px minmax(0,1fr) 10px;
+        grid-auto-rows: 40px;
+    }
+
+    header {
+        position: sticky;
+        top: 0;
+    }
+
+        nav {
+            grid-column: 2;
+            align-self: center;
+        }
+
+        
+
+    
+    ul.navmenu {
+        list-style: none;
+        padding-left: 0;
+        color: pink;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    ul.navmenu2nd {
+        list-style: none;
+        padding-left: 0;
+        background-color: pink;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+}
+
+/*#endregion*/
+/*>>>*/
+
+
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*#region << STYLE.CSS_FOOTER_ALL*/
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows:   20px;
+}
+
+div.home {
+    grid-column: 4;
+    align-self: center;
+    background-color: pink;
+}
+
+ul.navmenu {
+    list-style: none;
+    padding-left: 0;
+    background-color: pink;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+footer {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    background-color: white;
+    z-index: 10;
+ }
+
+/*#endregion*/
+/*>>>*/
+
+
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+

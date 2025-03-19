@@ -1,0 +1,25 @@
+<?php get_header(); ?>
+
+ 
+<?php // get_sidebar(); ?> 
+
+
+<?php 
+
+// extract the category slug
+
+			if ( is_single() ) {
+				$cats =  get_the_category();
+				$cat = $cats[0];
+			} else {
+				$cat = get_category( get_query_var( 'cat' ) );
+			}
+			$cat_slug = $cat->slug;
+
+// insert the category slug to let them know which template to get
+
+get_template_part( 'single-templates/single-content', $cat_slug ); 
+
+?>
+
+<?php get_footer(); ?>
